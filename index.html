@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DenSoulja</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link href="css/preloader.css" rel="stylesheet">
+<link href="css/highstl.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/Shacke.css" rel="stylesheet">
+<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/plugins.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/kill.js"></script>
+<style>
+@font-face{font-family:Pompadur;src:url(fonts/font.eot);src:local(pompadur),url(fonts/font.ttf);}h1{font-family:Pompadur,'Comic Sans MS',cursive;}
+@font-face{font-family:Bazy;src:url(fonts/bazy.eot);src:local(bazy),url(fonts/bazy.ttf);}
+body, a, a:link{cursor:url(images/cursor/cursor.cur.html), default;} a:hover {cursor:url(images/cursor/cursor2.cur.html),pointer;}
+</style>
+<div id="loader-wrapper"><div id="loader"></div>
+<div class="loader-section section-left"></div>
+<div class="loader-section section-right"></div> 
+</div>
+</head>
+<body onmousedown="return false" onselectstart="return false">
+<style>body{overflow:hidden}</style>
+<script>disableWheelScroll();</script>
+<div id="star" class="video mask overlay">
+<i class="volume-button fa fa-volume-up"></i>
+<i class="stop-button fa fa-pause"></i>
+<div class="video-fallback"></div>
+<video id="video" onloadstart="this.volume=0.3" loop>
+<source src="videos/bzytop.mp4" type="video/mp4"/>
+</video>
+<script>setTimeout(function(){document.getElementById("video").play();}, 3000);</script>
+<canvas class="cover"></canvas>
+</div>
+<div class="kill-feed"><div><span class="player t"></span><span class="weapons"><img height="20"/><img width="30" height="26" src="images/headshot.png"/></span><span class="player ct"></span></div></div>
+
+<div class="pageoverlay">
+<div class="lightbox">
+<div class="awrapper">
+<div class="titles animated rubberBand" style="animation-delay: 6s;">
+<div class="animated zoomIn" style="animation-delay: 4s;">
+<h1><font color="#ff00ff">#</font><font color="#FFFFFF">Den</font><font color="#ff00ff">Soulja</font></h1>
+</div>
+<div class="media animated fadeInUpBig" style="animation-delay: 5s;">
+                </center><a href="https://vk.com/densoulja" id="vk" title="VK" target="_blank"> <i class="fa fa-vk hvr-grow"></i> </a>
+				</center><a id="pp" style="cursor: pointer;" onclick="pVid();"> <i class="fa fa-music hvr-grow" title="Play?"></i> </a>
+				</center><a href="https://t.me/densoulja" target="_blank"> <i class="fa fa-paper-plane hvr-grow" title="Telegram"></i> </a>
+			    </div>
+</div>
+</div></div>
+<script>
+		
+		
+		function clock() {
+			//Save the times in variables
+			var today = new Date();
+			var hours = today.getHours();
+			var minutes = today.getMinutes();
+			var seconds = today.getSeconds();
+			var month = today.getMonth();
+			var day = today.getDate();
+			var year = today.getFullYear();
+			var monthNames = ["JAN.", "FEB.", "MAR.", "APR.", "MAY.", "JUN.", "JUL.", "AUG.", "SEP.", "OCT.", "NOV.", "DEC."];
+			//Set the AM or PM time
+			if(hours >= 24) {
+				meridiem = "PM";
+			} else {
+				meridiem = "AM";
+			}
+			//convert hours to 12 hour format and put 0 in front
+			if(hours > 24) {
+				hours = hours - 24;
+			} else if(hours === 0) {
+				hours = 24;
+			}
+			//Put 0 in front of single digit minutes and seconds
+			if(minutes < 10) {
+				minutes = "0" + minutes;
+			} else {
+				minutes = minutes;
+			}
+			if(seconds < 10) {
+				seconds = "0" + seconds;
+			} else {
+				seconds = seconds;
+			}
+			document.getElementById("clock").innerHTML = (meridiem + " " + hours + ":" + minutes);
+			document.getElementById("date").innerHTML = (monthNames[month] + " " + day + " " + year);
+		}
+		setInterval('clock()', 0);
+		</script>
+<div class="pagebottom">
+<center>
+<marquee height="50" width="850"> <font color="#ff00ff"><p class="marq">I love you <3</p></font></marquee>
+</script> <font color="#ff00ff"><span id="clock" style="position: fixed; bottom: 10%; left: 5%;">PM 07:30</span> <span id="date" style="position: fixed; bottom: 5%; left: 5%;">OCT. 22 2004</span>
+		<audio id="audio" preload="" autoplay="autoplay" loop="loop" onloadstart="this.volume=0.3">
+			<source type="audio/mp3" src="1.mp3"> </audio>
+		<script type="text/javascript">
+		var audio = document.getElementById("audio");
+
+		function pVid() {
+			audio.paused ? audio.play() : audio.pause();
+		}
+		</script>
+</center>
+</div>
+<script>$(document).ready(function() {setTimeout(function(){$('body').addClass('loaded');$('h1').css('color','#222222');}, 2500);});</script>
+</body>
+</html>
